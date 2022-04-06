@@ -8,3 +8,7 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root')
 );
+
+
+// https://www.origamid.com/curso/wordpress-rest-api-dogs 
+// https://dogsapi.origamid.dev/json
