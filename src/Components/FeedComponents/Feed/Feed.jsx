@@ -9,11 +9,11 @@ const Feed = ({ user }) => {
     const [infinite, setInfinite] = React.useState(true);
 
     React.useEffect(() => {
+        let wait = false;
         function infiniteScroll() {
             if (infinite) {
                 const scroll = window.scrollY;
                 const height = document.body.offsetHeight - window.innerHeight;
-                let wait = false;
 
                 if (scroll > height * 0.75 && !wait) {
                     setPages((pages) => [...pages, pages.length + 1]);
@@ -32,7 +32,7 @@ const Feed = ({ user }) => {
             window.removeEventListener("scroll", infiniteScroll);
         };
     }, [infinite]);
-
+    console.log(pages);
     return (
         <div>
             {modalPhoto && (
